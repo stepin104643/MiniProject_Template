@@ -7,18 +7,19 @@ void tearDown(){}
 
 void test_isprime(void)
 {
-  TEST_ASSERT_EQUAL("True", isprime(5));
-  TEST_ASSERT_EQUAL("False", isprime(6));
+  TEST_ASSERT_EQUAL(1, isprime(5));
+  TEST_ASSERT_EQUAL(1, isprime(7));
+  TEST_ASSERT_EQUAL(0, isprime(6));
 }
 void test_zero_one(void)
 {
-  TEST_ASSERT_EQUAL("False", isprime(0));
-  TEST_ASSERT_EQUAL("False", isprime(1));
+  TEST_ASSERT_EQUAL(0, isprime(0));
+  TEST_ASSERT_EQUAL(0, isprime(1));
 }
 void test_negative(void)
 {
-  TEST_ASSERT_EQUAL("False", isprime(-5));
-  TEST_ASSERT_EQUAL("False", isprime(-10));
+  TEST_ASSERT_EQUAL(0, isprime(-5));
+  TEST_ASSERT_EQUAL(0, isprime(-10));
 }
 
 int test_main(void)
